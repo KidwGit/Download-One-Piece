@@ -3,6 +3,7 @@ Require for computer:
 - NodeJS: https://nodejs.org/en/download/
 - Get puppeteer package with command:   
     npm install –save puppeteer
+- Prepare image-downloader before using    
 - [Config] Change your start/end chapter
 - [Config] Change your folder which u want to save your download
 - Run via command: 
