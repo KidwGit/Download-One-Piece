@@ -1,7 +1,7 @@
 # Download One-Piece automatically
 ---
 ### Prerequisites
-- IDE: maybe [VS-Code] (https://code.visualstudio.com/)
+- IDE: maybe [VS-Code](https://code.visualstudio.com/)
 - [NodeJS](https://nodejs.org/en/download/) 
 - Get puppeteer package:  
 ```
