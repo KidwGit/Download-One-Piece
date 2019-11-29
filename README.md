@@ -3,6 +3,8 @@
 ### Prerequisites
 - IDE: maybe [VS-Code](https://code.visualstudio.com/)
 - [NodeJS](https://nodejs.org/en/download/) 
+---
+### Installing
 - Get puppeteer package:  
 ```
 npm install –save puppeteer
