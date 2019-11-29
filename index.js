@@ -30,6 +30,7 @@ async function getImagesFromPage(url, folderName) {
         console.log(srcSetAttribute);
         return srcSetAttribute;
     })
+    
     const imgUrls = imageSrcSets.map(srcSet => getLargestImageFromSrcSet(srcSet));
     await browser.close();
 
