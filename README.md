@@ -1,7 +1,7 @@
 # Download-One-Piece
 Auto download One Piece
 ---
-##Require for computer
+## Require for computer
 - IDE: maybe VS-Code [Link](https://code.visualstudio.com/)
 - NodeJS [Link](https://nodejs.org/en/download/) 
 - Get puppeteer package with command:   
@@ -9,11 +9,11 @@ Auto download One Piece
 - Install image-downloader by:
     'npm install –save image-downloader'
 ---
-##Configuration
+## Configuration
  * Change your start/end chapter
  * Change your folder which u want to save your download
  ---
-##Run
+## Run
     'node index.js'
     ---
 © 2019 GitHub, Inc.
