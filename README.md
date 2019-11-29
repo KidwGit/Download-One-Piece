@@ -21,6 +21,3 @@ npm install –save image-downloader
 ### Run
     node index.js
 
-
- 
-© 2019 GitHub, Inc.
