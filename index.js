@@ -25,9 +25,15 @@ async function getImagesFromPage(url, folderName) {
         console.log(srcSetAttribute);
         return srcSetAttribute;
     })
+<<<<<<< HEAD
 
     // const imgUrls = imageSrcSets.map(srcSet => getLargestImageFromSrcSet(srcSet));
     // await browser.close();
+=======
+    
+    const imgUrls = imageSrcSets.map(srcSet => getLargestImageFromSrcSet(srcSet));
+    await browser.close();
+>>>>>>> 59d9fc3cf2569ef78b8da567ca8ed18627377dab
 
     // Get Image From Links
     imageSrcSets.forEach((imageSrcSets) => {
