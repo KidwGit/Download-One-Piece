@@ -5,15 +5,9 @@ const downloader = require('image-downloader');
 const resultFolder = '../../Comic/OnePiece/chapter_';
 // Download from page
 const insUrls = 'https://truyenqq.com/truyen-tranh/dao-hai-tac-128-chap-';//940.html';
-var START_DOWN_CHAPTER = 939;
-var END_DOWN_CHAPTER = 940;
+var START_DOWN_CHAPTER = 964;
+var END_DOWN_CHAPTER = 964;
 
-function getLargestImageFromSrcSet(srcSet) {
-    const splitedSrcs = srcSet.split(',');
-
-    const imgSrc = splitedSrcs[splitedSrcs.length - 1].split(' ')[0];
-    return imgSrc;
-}
 
 async function getImagesFromPage(url, folderName) {
     if (!f.existsSync(resultFolder + folderName)) {
@@ -25,19 +19,20 @@ async function getImagesFromPage(url, folderName) {
     await page.goto(url);
 
     const imageSrcSets = await page.evaluate(() => {
-        const imgs = Array.from(document.querySelectorAll('.story-see-content > img'));
+        //const imgs = Array.from(document.querySelectorAll('.story-see-content > img'));
+        const imgs = Array.from(document.querySelectorAll("img.lazy"));
         const srcSetAttribute = imgs.map(i => i.getAttribute('src'));
         console.log(srcSetAttribute);
         return srcSetAttribute;
     })
 
-    const imgUrls = imageSrcSets.map(srcSet => getLargestImageFromSrcSet(srcSet));
-    await browser.close();
+    // const imgUrls = imageSrcSets.map(srcSet => getLargestImageFromSrcSet(srcSet));
+    // await browser.close();
 
     // Get Image From Links
-    imgUrls.forEach((imgUrl) => {
+    imageSrcSets.forEach((imageSrcSets) => {
         downloader({
-            url: imgUrl,
+            url: imageSrcSets,
             dest: resultFolder + folderName
         })
     });
