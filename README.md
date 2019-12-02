@@ -7,7 +7,7 @@
 ### Installing
 - Get puppeteer package:  
 ```
-npm install –save puppeteer
+npm install puppeteer
 ```    
 - Install image-downloader:  
 ```
